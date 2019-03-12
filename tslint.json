@@ -1,0 +1,16 @@
+{
+  "defaultSeverity": "error",
+  "extends": [
+    "@blockone/tslint-config-blockone/tslint-config"
+  ],
+  "jsRules": {},
+  "rules": {
+  },
+  "rulesDirectory": [],
+  "linterOptions": {
+    "exclude": [
+      "src/**/templates/",
+      "**/*.js"
+    ]
+  }
+}

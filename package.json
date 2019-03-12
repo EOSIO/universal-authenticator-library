@@ -1,0 +1,70 @@
+{
+  "name": "@blockone/universal-authenticator-library",
+  "version": "0.0.34",
+  "description": "A library for allowing apps to easily use different auth providers.",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "rm -rf dist && tsc --build tsconfig.json",
+    "clean-build": "rm -rf dist && yarn build",
+    "lint": "tslint -c tslint.json -p tsconfig.json",
+    "test": "jest",
+    "build-publish": "npm run build && webpack",
+    "watch": "tsc -w --jsx react",
+    "prepublish": "yarn clean-build && sh ./build-docs.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EOSIO/universal-authenticator-library.git"
+  },
+  "author": {
+    "name": "block.one",
+    "url": "https://block.one/"
+  },
+  "contributors": [
+    "Jeffrey Smith",
+    "Nasser Abouelazm",
+    "Chris Allnutt",
+    "Randy Torres"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/EOSIO/universal-authenticator-library/issues"
+  },
+  "homepage": "https://github.com/EOSIO/universal-authenticator-library#readme",
+  "devDependencies": {
+    "@blockone/tslint-config-blockone": "^1.0.0",
+    "@types/jest": "^23.3.13",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-preset-env": "^1.7.0",
+    "jest": "^23.6.0",
+    "ts-jest": "^23.10.4",
+    "tslint": "^5.11.0",
+    "typedoc": "^0.14.0",
+    "typescript": "^3.1.6",
+    "webpack": "^4.26.0",
+    "webpack-cli": "^3.1.2"
+  },
+  "jest": {
+    "verbose": false,
+    "moduleFileExtensions": [
+      "ts",
+      "js"
+    ],
+    "transform": {
+      "^.+\\.(ts)$": "ts-jest"
+    },
+    "globals": {
+      "ts-jest": {
+        "tsConfig": "tsconfig.json"
+      }
+    },
+    "testPathIgnorePatterns": [
+      "<rootDir>/node_modules",
+      "<rootDir>/dist"
+    ],
+    "testRegex": "(/src/.*(\\.|/)(test|spec))\\.(js|ts)$",
+    "testEnvironment": "node"
+  }
+}
