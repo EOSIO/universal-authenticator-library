@@ -7,7 +7,20 @@ The Universal Authenticator Library (UAL) achieves this goal by abstracting the 
 
 This lets App Developers integrate once, and support all authentication providers that implement an Authenticator for UAL.
 
-End Users benefit from a consistent and familiar interface that allows them to login to an app using the authentication provider of their choice.
+UAL also provides a renderer concept. Renderers are used so that the login experience on every site using UAL is the same. This gives End Users the benefit of a consistent and familiar interface. By utilizing the `getStyles()` method on the Authenticators, the Authenticator button will be rendered the same on any website.
+
+### In Summary
+
+For integrating app developers:
+* a simple way to support multiple key managers, with a few lines of code
+* increases an application’s market reach, by supporting multiple authenticators
+* reduces time to create applications, by eliminating the need to individually support authenticators
+* access to all the necessary functions to sign transactions and customize user experience
+
+For app users:
+* a way to login to integrating apps using the authenticator of choice
+* a uniform, familiar login option that instills confidence while interacting with integrating apps
+
 
 ![UAL Image](.images/ual-login.png)
 
@@ -52,3 +65,4 @@ Example usage can be found at:
 ## License
 
 [MIT](https://github.com/EOSIO/universal-authenticator-library/blob/develop/LICENSE)
+
