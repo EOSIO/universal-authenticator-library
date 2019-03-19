@@ -47,6 +47,7 @@ Requires one or more Authenticators to communicate with the auth provider. Curre
  - [Scatter](https://github.com/EOSIO/ual-scatter)
  - [Lynx](https://github.com/EOSIO/ual-lynx)
  - [Ledger](https://github.com/EOSIO/ual-ledger)
+ - [Token Pocket](https://github.com/EOSIO/ual-token-pocket)
 
 Recommended to use one of the prebuilt Renderers rather than the library directly:
  - [UAL JS](https://github.com/EOSIO/universal-authenticator-library-plain-js-renderer)
