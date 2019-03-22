@@ -21,8 +21,9 @@ For app users:
 * a way to login to integrating apps using the authenticator of choice
 * a uniform, familiar login option that instills confidence while interacting with integrating apps
 
+<img src=".images/ual-login.png" alt="UAL Image" width="400">
 
-![UAL Image](.images/ual-login.png)
+*All product and company names are trademarks™ or registered® trademarks of their respective holders. Use of them does not imply any affiliation with or endorsement by them.*
 
 ## Architecture
 UAL Core - Provides abstract classes/interfaces to provide consistent Public APIs for integrating developers. Also provides some minor convenience functions.
@@ -31,7 +32,7 @@ Authenticators - Communicates with the signing app/device. An Authenticator prov
 
 Renderers - Provides a UI layer for giving users a consistent UI/UX flow, independent of the Authenticator they are using or the site they are on.
 
-![UAL architecture](.images/ual-flow.png)
+<img src=".images/ual-flow.png" alt="UAL architecture" width="700">
 
 ## Usage (Authenticator Developer)
 
@@ -44,18 +45,18 @@ Logging in returns 1 or more `User` objects. A `User` object provides the abilit
 ## Usage (Dapp Developer)
 
 Requires one or more Authenticators to communicate with the auth provider. Currently supported authenticators include:
- - [Scatter](https://github.com/EOSIO/ual-scatter)
- - [Lynx](https://github.com/EOSIO/ual-lynx)
- - [Ledger](https://github.com/EOSIO/ual-ledger)
- - [Token Pocket](https://github.com/EOSIO/ual-token-pocket)
+ - [UAL for Scatter](https://github.com/EOSIO/ual-scatter)
+ - [UAL for Lynx](https://github.com/EOSIO/ual-lynx)
+ - [UAL for Ledger](https://github.com/EOSIO/ual-ledger)
+ - [UAL for Token Pocket](https://github.com/EOSIO/ual-token-pocket)
 
 Recommended to use one of the prebuilt Renderers rather than the library directly:
- - [UAL JS](https://github.com/EOSIO/universal-authenticator-library-plain-js-renderer)
- - [UAL React](https://github.com/EOSIO/universal-authenticator-library-react-js-renderer)
+ - [UAL Renderer for PlainJS](https://github.com/EOSIO/universal-authenticator-library-plain-js-renderer)
+ - [UAL Renderer for ReactJS](https://github.com/EOSIO/universal-authenticator-library-react-js-renderer)
 
 Example usage can be found at:
- - [UAL JS Example](https://github.com/EOSIO/universal-authenticator-library-plain-js-renderer/tree/develop/examples)
- - [UAL React Example](https://github.com/EOSIO/universal-authenticator-library-react-js-renderer/tree/develop/examples)
+ - [Basic Example App for UAL with PlainJS](https://github.com/EOSIO/universal-authenticator-library-plain-js-renderer/tree/develop/examples)
+ - [Basic Example App for UAL with ReactJS](https://github.com/EOSIO/universal-authenticator-library-react-js-renderer/tree/develop/examples)
 
 ## Contributing
 
