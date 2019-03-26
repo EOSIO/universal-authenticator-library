@@ -51,22 +51,22 @@ Requires one or more Authenticators to communicate with the auth provider. Curre
  - [UAL for Token Pocket](https://github.com/EOSIO/ual-token-pocket)
 
 Recommended to use one of the prebuilt Renderers rather than the library directly:
- - [UAL Renderer for PlainJS](https://github.com/EOSIO/universal-authenticator-library-plain-js-renderer)
- - [UAL Renderer for ReactJS](https://github.com/EOSIO/universal-authenticator-library-react-js-renderer)
+ - [UAL Renderer for PlainJS](https://github.com/EOSIO/ual-plainjs-renderer)
+ - [UAL Renderer for ReactJS](https://github.com/EOSIO/ual-reactjs-renderer)
 
 Example usage can be found at:
- - [Basic Example App for UAL with PlainJS](https://github.com/EOSIO/universal-authenticator-library-plain-js-renderer/tree/develop/examples)
- - [Basic Example App for UAL with ReactJS](https://github.com/EOSIO/universal-authenticator-library-react-js-renderer/tree/develop/examples)
+ - [Basic Example App for UAL with PlainJS](https://github.com/EOSIO/ual-plainjs-renderer/tree/develop/examples)
+ - [Basic Example App for UAL with ReactJS](https://github.com/EOSIO/ual-reactjs-renderer/tree/develop/examples)
 
 ## Contributing
 
-[Contributing Guide](https://github.com/EOSIO/universal-authenticator-library/blob/develop/CONTRIBUTING.md)
+[Contributing Guide](./CONTRIBUTING.md)
 
-[Code of Conduct](https://github.com/EOSIO/universal-authenticator-library/blob/develop/CONTRIBUTING.md#conduct)
+[Code of Conduct](./CONTRIBUTING.md#conduct)
 
 ## License
 
-[MIT](https://github.com/EOSIO/universal-authenticator-library/blob/develop/LICENSE)
+[MIT](./LICENSE)
 
 ## Important
 
