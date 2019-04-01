@@ -50,7 +50,7 @@ Logging in returns 1 or more `User` objects. A `User` object provides the abilit
 
 ## Usage (Dapp Developer)
 
-Requires one or more Authenticators to communicate with the auth provider. Currently supported authenticators include:
+Requires one or more Authenticators to communicate with the auth provider. Currently supported authenticators include the following. See the [UAL New Authenticator Walkthrough](https://github.com/EOSIO/ual-authenticator-walkthrough) to learn how contributors could add new Authenticators.
  - [UAL for Scatter](https://github.com/EOSIO/ual-scatter)
  - [UAL for Lynx](https://github.com/EOSIO/ual-lynx)
  - [UAL for Ledger](https://github.com/EOSIO/ual-ledger)
