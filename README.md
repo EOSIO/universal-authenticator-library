@@ -50,7 +50,7 @@ Logging in returns 1 or more `User` objects. A `User` object provides the abilit
 
 ## Usage (Dapp Developer)
 
-Requires one or more Authenticators to communicate with the auth provider. Currently supported authenticators include:
+Requires one or more Authenticators to communicate with the auth provider. Currently supported authenticators include the following. See the [UAL New Authenticator Walkthrough](https://github.com/EOSIO/ual-authenticator-walkthrough) to learn how contributors could add new Authenticators.
  - [UAL for Scatter](https://github.com/EOSIO/ual-scatter)
  - [UAL for Lynx](https://github.com/EOSIO/ual-lynx)
  - [UAL for Ledger](https://github.com/EOSIO/ual-ledger)
@@ -61,8 +61,8 @@ Recommended to use one of the prebuilt Renderers rather than the library directl
  - [UAL Renderer for ReactJS](https://github.com/EOSIO/ual-reactjs-renderer)
 
 Example usage can be found at:
- - [Basic Example App for UAL with PlainJS](https://github.com/EOSIO/ual-plainjs-renderer/tree/develop/examples)
- - [Basic Example App for UAL with ReactJS](https://github.com/EOSIO/ual-reactjs-renderer/tree/develop/examples)
+ - [Basic Example App for UAL with PlainJS](https://github.com/EOSIO/ual-plainjs-renderer/tree/master/examples)
+ - [Basic Example App for UAL with ReactJS](https://github.com/EOSIO/ual-reactjs-renderer/tree/master/examples)
 
 ## Contributing
 
