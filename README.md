@@ -61,8 +61,8 @@ Recommended to use one of the prebuilt Renderers rather than the library directl
  - [UAL Renderer for ReactJS](https://github.com/EOSIO/ual-reactjs-renderer)
 
 Example usage can be found at:
- - [Basic Example App for UAL with PlainJS](https://github.com/EOSIO/ual-plainjs-renderer/tree/develop/examples)
- - [Basic Example App for UAL with ReactJS](https://github.com/EOSIO/ual-reactjs-renderer/tree/develop/examples)
+ - [Basic Example App for UAL with PlainJS](https://github.com/EOSIO/ual-plainjs-renderer/tree/master/examples)
+ - [Basic Example App for UAL with ReactJS](https://github.com/EOSIO/ual-reactjs-renderer/tree/master/examples)
 
 ## Contributing
 
