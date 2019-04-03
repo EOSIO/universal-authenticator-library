@@ -27,6 +27,8 @@ For app users:
 * a way to login to integrating apps using the authenticator of choice
 * a uniform, familiar login option that instills confidence while interacting with integrating apps
 
+The following is an example for a *desktop browser*.  Mobile wallets with built-in browsers are autodetected and will not prompt the user to select them.
+
 <img src=".images/ual-login.png" alt="UAL Image" width="400">
 
 *All product and company names are trademarks™ or registered® trademarks of their respective holders. Use of them does not imply any affiliation with or endorsement by them.*
