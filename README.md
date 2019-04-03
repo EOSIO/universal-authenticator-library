@@ -55,6 +55,7 @@ Requires one or more Authenticators to communicate with the auth provider. Curre
  - [UAL for Lynx](https://github.com/EOSIO/ual-lynx)
  - [UAL for Ledger](https://github.com/EOSIO/ual-ledger)
  - [UAL for Token Pocket](https://github.com/EOSIO/ual-token-pocket)
+ - [UAL for MEET.ONE](https://github.com/meet-one/ual-meetone)
 
 Recommended to use one of the prebuilt Renderers rather than the library directly:
  - [UAL Renderer for PlainJS](https://github.com/EOSIO/ual-plainjs-renderer)
