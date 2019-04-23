@@ -52,11 +52,15 @@ Logging in returns 1 or more `User` objects. A `User` object provides the abilit
 
 ## Usage (Dapp Developer)
 
-Requires one or more Authenticators to communicate with the auth provider. Currently supported authenticators include the following. See the [UAL New Authenticator Walkthrough](https://github.com/EOSIO/ual-authenticator-walkthrough) to learn how contributors could add new Authenticators.
+Requires one or more Authenticators to communicate with the auth provider. Currently supported Authenticators include the following. See the [UAL New Authenticator Walkthrough](https://github.com/EOSIO/ual-authenticator-walkthrough) to learn how contributors could add new Authenticators.
+
+Authenticators initially created by block.one:
  - [UAL for Scatter](https://github.com/EOSIO/ual-scatter)
  - [UAL for Lynx](https://github.com/EOSIO/ual-lynx)
  - [UAL for Ledger](https://github.com/EOSIO/ual-ledger)
  - [UAL for Token Pocket](https://github.com/EOSIO/ual-token-pocket)
+ 
+Authenticators contributed by wallet providers and other community members:  
  - [UAL for MEET.ONE](https://github.com/meet-one/ual-meetone)
 
 Recommended to use one of the prebuilt Renderers rather than the library directly:
