@@ -7,7 +7,7 @@ stages:
 jobs:
   include:
   - stage: test
-    name: "Lint and Tests"
+    name: "Lint and Test"
     script:
     - yarn lint
     - yarn test
