@@ -1,6 +1,6 @@
 {
   "name": "universal-authenticator-library",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "A library for allowing apps to easily use different auth providers.",
   "main": "dist/index.js",
   "scripts": {
