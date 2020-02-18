@@ -2,7 +2,8 @@ import { Authenticator } from './Authenticator'
 import {
   mockAuthenticatorToRender,
   mockAuthenticatorToNotRender,
-  mockAuthenticatorToAutoLogin
+  mockAuthenticatorToAutoLogin,
+  mockAuthenticatorToInvalidate
 } from '../__mocks__/authenticatorMocks'
 import { AuthenticatorResponse, Chain } from './interfaces'
 import { UAL } from './UAL'
@@ -23,15 +24,18 @@ describe('UAL', () => {
   let renderMe: Authenticator
   let dontRenderMe: Authenticator
   let autoLoginMe: Authenticator
+  let invalidateMe: Authenticator
 
   beforeAll(() => {
     renderMe = new mockAuthenticatorToRender([mockChain])
     dontRenderMe = new mockAuthenticatorToNotRender([mockChain])
     autoLoginMe = new mockAuthenticatorToAutoLogin([mockChain])
+    invalidateMe = new mockAuthenticatorToInvalidate([mockChain])
     authenticators = [
       renderMe,
       dontRenderMe,
-      autoLoginMe
+      autoLoginMe,
+      invalidateMe
     ]
     ual = new UAL([mockChain], 'My App', authenticators)
   })
@@ -42,6 +46,7 @@ describe('UAL', () => {
       renderMe.init = jest.fn()
       dontRenderMe.init = jest.fn()
       autoLoginMe.init = jest.fn()
+      invalidateMe.init = jest.fn()
     })
     beforeEach(() => {
       response = ual.getAuthenticators()
@@ -60,6 +65,7 @@ describe('UAL', () => {
     it('that filters in authenticators that should be rendered', () => {
       expect(response.availableAuthenticators.indexOf(renderMe)).not.toEqual(-1)
       expect(response.availableAuthenticators.indexOf(autoLoginMe)).not.toEqual(-1)
+      expect(response.availableAuthenticators.indexOf(invalidateMe)).not.toEqual(-1)
     })
 
     it('that filters out authenticators that cannot be rendered', () => {
@@ -69,6 +75,7 @@ describe('UAL', () => {
     it('that calls init on all available authenticators', () => {
       expect(renderMe.init).toHaveBeenCalled()
       expect(autoLoginMe.init).toHaveBeenCalled()
+      expect(invalidateMe.init).toHaveBeenCalled()
     })
 
     it('that does not call init on unavailable authenticators', () => {
@@ -77,6 +84,14 @@ describe('UAL', () => {
 
     it('that returns an auto-login authenticator if it is the only one available', () => {
       expect(response.autoLoginAuthenticator).toEqual(null)
+    })
+
+    it('that returns an invalidate after authenticator with correct setting', () => {
+      expect(invalidateMe.shouldInvalidateAfter()).toEqual(0)
+    })
+
+    it('that returns an authenticator without shouldInvalidateAfter to have default setting', () => {
+      expect(autoLoginMe.shouldInvalidateAfter()).toEqual(604800)
     })
 
     it('that does not return an auto-login authenticator if other authenticators are available', () => {
