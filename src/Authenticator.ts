@@ -69,6 +69,16 @@ export abstract class Authenticator {
   public abstract shouldRequestAccountName(): Promise<boolean>
 
   /**
+   * Returns the amount of seconds after the authentication will be invalid for logging in on new
+   * browser sessions.  Setting this value to zero will cause users to re-attempt authentication on
+   * every new browser session.  Please note that the invalidate time will be saved client-side and
+   * should not be relied on for security.
+   */
+  public shouldInvalidateAfter(): number {
+    return 604800
+  }
+
+  /**
    * Login using the Authenticator App. This can return one or more users depending on multiple chain support.
    *
    * @param accountName  The account name of the user for Authenticators that do not store accounts (optional)
