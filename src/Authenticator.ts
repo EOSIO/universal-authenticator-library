@@ -6,6 +6,12 @@ import { User } from './User'
  * Represents Button that is rendered for, and interfaces with, a specific Authenticator app.
  */
 export abstract class Authenticator {
+
+  /**
+   * Default value for shouldInvalidateAfter(), 1 week in seconds
+   */
+  private defaultInvalidateAfter = 604800
+
   /**
    * @param chains     This represents each of the chains that the dapp provides support for.
    *
@@ -75,7 +81,7 @@ export abstract class Authenticator {
    * should not be relied on for security.
    */
   public shouldInvalidateAfter(): number {
-    return 604800
+    return this.defaultInvalidateAfter
   }
 
   /**
