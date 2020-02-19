@@ -1,9 +1,10 @@
+// tslint:disable:max-classes-per-file
 import { Authenticator } from '../src/Authenticator'
-import { UALError } from '../src/UALError'
 import { ButtonStyle, Chain } from '../src/interfaces'
+import { UALError } from '../src/UALError'
 import { User } from '../src/User'
 
-export class mockAuthenticatorToRender extends Authenticator {
+class MockAuthenticator extends Authenticator {
   constructor(chains: Chain[]) {
     super(chains)
   }
@@ -11,45 +12,45 @@ export class mockAuthenticatorToRender extends Authenticator {
   public init(): Promise<void> {
     return Promise.resolve()
   }
-  
+
   public reset(): void {}
-  
+
   public isErrored(): boolean {
     return false
   }
-  
+
   public getOnboardingLink(): string {
     return ''
   }
-  
+
   public getError(): UALError | null {
     return null
   }
-  
+
   public isLoading(): boolean {
     return true
   }
-  
+
   public getStyle(): ButtonStyle {
-   throw new Error('method not implemented')
+    throw new Error('method not implemented')
   }
-  
+
   public shouldRender(): boolean {
     return true
   }
-  
+
   public shouldAutoLogin(): boolean {
     return false
   }
-  
+
   public shouldRequestAccountName(): Promise<boolean> {
     throw new Error('method not implemented')
   }
-  
+
   public login(accountName?: string): Promise<User[]> {
     throw new Error(`method not implemented for ${accountName}`)
   }
-  
+
   public logout(): Promise<void> {
     throw new Error('method not implemented')
   }
@@ -59,174 +60,42 @@ export class mockAuthenticatorToRender extends Authenticator {
   }
 }
 
-export class mockAuthenticatorToNotRender extends Authenticator {
+export class MockAuthenticatorToRender extends MockAuthenticator {
   constructor(chains: Chain[]) {
     super(chains)
   }
 
-  public init(): Promise<void> {
-    return Promise.resolve()
-  }
-  
-  public reset(): void {}
-  
-  public isErrored(): boolean {
-    return false
-  }
-  
-  public getOnboardingLink(): string {
-    return ''
-  }
-  
-  public getError(): UALError | null {
-    return null
-  }
-  
-  public isLoading(): boolean {
+  public shouldRender(): boolean {
     return true
   }
-  
-  public getStyle(): ButtonStyle {
-   throw new Error('method not implemented')
-  }
-  
-  public shouldRender(): boolean {
-    return false
-  }
-  
-  public shouldAutoLogin(): boolean {
-    return false
-  }
-  
-  public shouldRequestAccountName(): Promise<boolean> {
-    throw new Error('method not implemented')
-  }
-  
-  public login(accountName?: string): Promise<User[]> {
-    throw new Error(`method not implemented for ${accountName}`)
-  }
-  
-  public logout(): Promise<void> {
-    throw new Error('method not implemented')
+}
+
+export class MockAuthenticatorToNotRender extends MockAuthenticator {
+  constructor(chains: Chain[]) {
+    super(chains)
   }
 
-  public requiresGetKeyConfirmation(): boolean {
+  public shouldRender(): boolean {
     return false
   }
 }
 
-export class mockAuthenticatorToAutoLogin extends Authenticator {
+export class MockAuthenticatorToAutoLogin extends MockAuthenticator {
   constructor(chains: Chain[]) {
     super(chains)
   }
 
-  public init(): Promise<void> {
-    return Promise.resolve()
-  }
-  
-  public reset(): void {}
-  
-  public isErrored(): boolean {
-    return false
-  }
-  
-  public getOnboardingLink(): string {
-    return ''
-  }
-  
-  public getError(): UALError | null {
-    return null
-  }
-  
-  public isLoading(): boolean {
-    return true
-  }
-  
-  public getStyle(): ButtonStyle {
-   throw new Error('method not implemented')
-  }
-  
-  public shouldRender(): boolean {
-    return true
-  }
-  
   public shouldAutoLogin(): boolean {
     return true
-  }
-  
-  public shouldRequestAccountName(): Promise<boolean> {
-    throw new Error('method not implemented')
-  }
-  
-  public login(accountName?: string): Promise<User[]> {
-    throw new Error(`method not implemented for ${accountName}`)
-  }
-  
-  public logout(): Promise<void> {
-    throw new Error('method not implemented')
-  }
-
-  public requiresGetKeyConfirmation(): boolean {
-    return false
   }
 }
 
-export class mockAuthenticatorToInvalidate extends Authenticator {
+export class MockAuthenticatorToInvalidate extends MockAuthenticator {
   constructor(chains: Chain[]) {
     super(chains)
-  }
-
-  public init(): Promise<void> {
-    return Promise.resolve()
-  }
-
-  public reset(): void {}
-
-  public isErrored(): boolean {
-    return false
-  }
-
-  public getOnboardingLink(): string {
-    return ''
-  }
-
-  public getError(): UALError | null {
-    return null
-  }
-
-  public isLoading(): boolean {
-    return true
-  }
-
-  public getStyle(): ButtonStyle {
-    throw new Error('method not implemented')
-  }
-
-  public shouldRender(): boolean {
-    return true
-  }
-
-  public shouldAutoLogin(): boolean {
-    return false
   }
 
   public shouldInvalidateAfter(): number {
     return 0
-  }
-
-  public shouldRequestAccountName(): Promise<boolean> {
-    throw new Error('method not implemented')
-  }
-
-  public login(accountName?: string): Promise<User[]> {
-    throw new Error(`method not implemented for ${accountName}`)
-  }
-
-  public logout(): Promise<void> {
-    throw new Error('method not implemented')
-  }
-
-  public requiresGetKeyConfirmation(): boolean {
-    return false
   }
 }

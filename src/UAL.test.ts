@@ -1,10 +1,10 @@
-import { Authenticator } from './Authenticator'
 import {
-  mockAuthenticatorToRender,
-  mockAuthenticatorToNotRender,
-  mockAuthenticatorToAutoLogin,
-  mockAuthenticatorToInvalidate
+  MockAuthenticatorToAutoLogin,
+  MockAuthenticatorToInvalidate,
+  MockAuthenticatorToNotRender,
+  MockAuthenticatorToRender
 } from '../__mocks__/authenticatorMocks'
+import { Authenticator } from './Authenticator'
 import { AuthenticatorResponse, Chain } from './interfaces'
 import { UAL } from './UAL'
 
@@ -27,10 +27,10 @@ describe('UAL', () => {
   let invalidateMe: Authenticator
 
   beforeAll(() => {
-    renderMe = new mockAuthenticatorToRender([mockChain])
-    dontRenderMe = new mockAuthenticatorToNotRender([mockChain])
-    autoLoginMe = new mockAuthenticatorToAutoLogin([mockChain])
-    invalidateMe = new mockAuthenticatorToInvalidate([mockChain])
+    renderMe = new MockAuthenticatorToRender([mockChain])
+    dontRenderMe = new MockAuthenticatorToNotRender([mockChain])
+    autoLoginMe = new MockAuthenticatorToAutoLogin([mockChain])
+    invalidateMe = new MockAuthenticatorToInvalidate([mockChain])
     authenticators = [
       renderMe,
       dontRenderMe,
