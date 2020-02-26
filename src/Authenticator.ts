@@ -6,6 +6,12 @@ import { User } from './User'
  * Represents Button that is rendered for, and interfaces with, a specific Authenticator app.
  */
 export abstract class Authenticator {
+
+  /**
+   * Default value for shouldInvalidateAfter(), 1 week in seconds
+   */
+  private defaultInvalidateAfter = 604800
+
   /**
    * @param chains     This represents each of the chains that the dapp provides support for.
    *
@@ -67,6 +73,16 @@ export abstract class Authenticator {
    * This is for Authenticators that do not have a concept of account names.
    */
   public abstract shouldRequestAccountName(): Promise<boolean>
+
+  /**
+   * Returns the amount of seconds after the authentication will be invalid for logging in on new
+   * browser sessions.  Setting this value to zero will cause users to re-attempt authentication on
+   * every new browser session.  Please note that the invalidate time will be saved client-side and
+   * should not be relied on for security.
+   */
+  public shouldInvalidateAfter(): number {
+    return this.defaultInvalidateAfter
+  }
 
   /**
    * Login using the Authenticator App. This can return one or more users depending on multiple chain support.
