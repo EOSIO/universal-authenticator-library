@@ -5,12 +5,10 @@
   "main": "dist/index.js",
   "scripts": {
     "build": "rm -rf dist && tsc --build tsconfig.json",
-    "clean-build": "rm -rf dist && yarn build",
     "lint": "eslint --ext .js,.jsx,.ts,.tsx src",
     "test": "jest",
-    "build-publish": "npm run build && webpack",
     "watch": "tsc -w --jsx react",
-    "prepublish": "yarn clean-build && sh ./build-docs.sh"
+    "prepare": "yarn build && sh ./build-docs.sh"
   },
   "repository": {
     "type": "git",
@@ -34,21 +32,12 @@
   "homepage": "https://github.com/EOSIO/universal-authenticator-library#readme",
   "devDependencies": {
     "@blockone/eslint-config-blockone": "^3.0.0",
-    "@types/jest": "^23.3.13",
-    "babel-cli": "^6.26.0",
-    "babel-core": "^6.26.3",
-    "babel-loader": "^7.1.5",
-    "babel-preset-env": "^1.7.0",
+    "@types/jest": "^25.1.4",
     "eslint": "^6.8.0",
-    "jest": "^24.9.0",
-    "ts-jest": "^24.0.2",
-    "typedoc": "^0.15.6",
-    "typescript": "^3.1.6",
-    "webpack": "^4.39.3",
-    "webpack-cli": "^3.3.8"
-  },
-  "resolutions": {
-    "braces": "^2.3.1"
+    "jest": "^25.1.0",
+    "ts-jest": "^25.2.1",
+    "typedoc": "^0.16.11",
+    "typescript": "^3.8.3"
   },
   "jest": {
     "verbose": false,
