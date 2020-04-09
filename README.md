@@ -59,9 +59,10 @@ Authenticators initially created by block.one:
  - [UAL for Lynx](https://github.com/EOSIO/ual-lynx)
  - [UAL for Ledger](https://github.com/EOSIO/ual-ledger)
  - [UAL for Token Pocket](https://github.com/EOSIO/ual-token-pocket)
- 
+
 Authenticators contributed by wallet providers and other community members:  
  - [UAL for MEET.ONE](https://github.com/meet-one/ual-meetone)
+ - [UAL for Anchor](https://github.com/greymass/ual-anchor)
 
 Recommended to use one of the prebuilt Renderers rather than the library directly:
  - [UAL Renderer for PlainJS](https://github.com/EOSIO/ual-plainjs-renderer)
