@@ -100,4 +100,9 @@ export abstract class Authenticator {
    * Returns true if user confirmation is required for `getKeys`
    */
   public abstract requiresGetKeyConfirmation(): boolean
+
+  /**
+   * Returns the name of the authenticator.
+   */
+  public abstract getName(): string
 }
