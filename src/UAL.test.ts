@@ -99,5 +99,12 @@ describe('UAL', () => {
       response = ual.getAuthenticators()
       expect(response.autoLoginAuthenticator).toEqual(autoLoginMe)
     })
+
+    it('can return name when calling getName', () => {
+      let expectedName = 'authenticator'
+      authenticators.forEach(authenticator => {
+        expect(authenticator.getName()).toEqual(expectedName)
+      })
+    })
   })
 })
