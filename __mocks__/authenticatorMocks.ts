@@ -58,6 +58,10 @@ class MockAuthenticator extends Authenticator {
   public requiresGetKeyConfirmation(): boolean {
     return false
   }
+
+  public getName(): string {
+    return 'authenticator'
+  }
 }
 
 export class MockAuthenticatorToRender extends MockAuthenticator {
